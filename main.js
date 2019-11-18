@@ -19,14 +19,11 @@ function setAge(person, age) {
 }
 
 function giveBirthday(person) {
-  if (person.age) {
+  if (age in person) {
     person.age++;
   } else {
     person.age = 1;
   }
-
-  // Alternate common JavaScript shorthand:
-  // person.age = person.age + 1 || 1;
 }
 
 function marry(person1, person2) {
