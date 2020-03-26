@@ -1,24 +1,24 @@
-function getFirstName(person) {
+const getFirstName = function(person) {
   return person.firstName;
 }
 
-function getLastName(person) {
+const getLastName = function(person) {
   return person.lastName;
 }
 
-function getFullName(person) {
+const getFullName = function(person) {
   return `${person.firstName} ${person.lastName}`
 }
 
-function setFirstName(person, name) {
+const setFirstName = function(person, name) {
   person.firstName = name;
 }
 
-function setAge(person, age) {
+const setAge = function(person, age) {
   person.age = age;
 }
 
-function giveBirthday(person) {
+const giveBirthday = function(person) {
   if (age in person) {
     person.age++;
   } else {
@@ -26,7 +26,7 @@ function giveBirthday(person) {
   }
 }
 
-function marry(person1, person2) {
+const marry = function(person1, person2) {
   person1.married = true;
   person2.married = true;
 
@@ -34,13 +34,14 @@ function marry(person1, person2) {
   person2.spouseName = getFullName(person1);
 }
 
-function divorce(person1, person2) {
+const divorce = function(person1, person2) {
   person1.married = false;
   person2.married = false;
 
   delete person1.spouseName
   delete person2.spouseName
 }
+
 
 module.exports = {
   getFirstName,
