@@ -19,7 +19,7 @@ const setAge = function(person, age) {
 }
 
 const giveBirthday = function(person) {
-  if (age in person) {
+  if ('age' in person) {
     person.age++;
   } else {
     person.age = 1;
