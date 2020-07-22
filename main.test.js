@@ -10,45 +10,6 @@ const {
 } = require('./main.js')
 
 
-const template1 = {
-  firstName: 'Colin',
-  lastName: 'Jaffe',
-  age: 39,
-  married: true,
-  spouseName: 'Redacted Jaffe'
-};
-
-const template2 = {
-  firstName: 'Mesuara',
-  lastName: 'Kaleziq',
-  age: 29,
-  married: false,
-};
-const template3 = {
-  firstName: 'Anthony',
-  lastName: 'DeRosa',
-  age: 40,
-  married: false,
-}
-const person1 = {};
-const person2 = {};
-const person3 = {};
-
-beforeEach(() => {
-  // Object.keys(person1).forEach((key) => {
-  //   delete person1[key];
-  // })
-
-  // Object.keys(person2).forEach((key) => {
-  //   delete person2[key];
-  // })
-
-  Object.assign(person1, template1);
-  Object.assign(person2, template2);
-  Object.assign(person3, template3);
-})
-
-
 describe('getFirstName', () => {
   it(`returns the first name of the given person`, () => {
     const person1 = {
