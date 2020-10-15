@@ -7,7 +7,7 @@ const getLastName = function(person) {
 }
 
 const getFullName = function(person) {
-  return `${person.firstName} ${person.lastName}`
+  return person.firstName + ' ' + person.lastName;
 }
 
 const setFirstName = function(person, name) {
