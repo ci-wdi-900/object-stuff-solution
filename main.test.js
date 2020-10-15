@@ -257,10 +257,10 @@ describe('divorce', () => {
     };
 
     divorce(person1, person2);
-    expect(!person1.married && !person2.married).toBe(true);
+    expect(person1.married === false && person2.married === false).toBe(true);
 
     divorce(person3, person4);
-    expect(!person3.married && !person4.married).toBe(true);
+    expect(person3.married === false && person4.married === false).toBe(true);
   })
 
   it(`removes the spouseName property entirely from both people`, () => {
@@ -281,7 +281,10 @@ describe('divorce', () => {
     };
 
     divorce(person1, person2)
+    expect(person1.spouseName).toBe(undefined)
+    expect(person2.spouseName).toBe(undefined)
     expect('spouseName' in person1).toBe(false)
+    expect('spouseName' in person2).toBe(false)
     expect('spouseName' in person2).toBe(false)
   })
 })
